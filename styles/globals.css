@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -23,4 +27,13 @@ a {
     color: white;
     background: black;
   }
+}
+
+.collapsed {
+  flex-grow: 0;
+}
+
+.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
 }
