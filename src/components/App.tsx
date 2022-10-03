@@ -4,9 +4,9 @@ import useLocalStorage from '../hooks/useLocalStorage'
 
 function App() {
 
-    const [html, setHtml] = useLocalStorage("html","")
-    const [css, setCss] = useLocalStorage("css","")
-    const [javascript, setJavascript] = useLocalStorage("javascript","")
+    const [html, setHtml] = useLocalStorage("html", "")
+    const [css, setCss] = useLocalStorage("css", "")
+    const [javascript, setJavascript] = useLocalStorage("javascript", "")
     const [srcDoc, setSrcDoc] = useState("")
 
     useEffect(() => {
