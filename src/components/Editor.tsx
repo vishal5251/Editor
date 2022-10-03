@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Controlled as CodeMirror } from 'react-codemirror2'
-import {Close, Add} from "@carbon/icons-react"
+import { Close, Add } from "@carbon/icons-react"
 
 function Editor({ displayName, language, value, onChange }: { displayName: string; language: string; value: string; onChange: (value: string) => void }) {
 
@@ -26,7 +26,7 @@ function Editor({ displayName, language, value, onChange }: { displayName: strin
             <div className='flex justify-between bg-[rgba(0,0,0,0.3)] py-2 pl-4 pr-2 rounded-t-md'>
                 {displayName}
                 <button className='ml-2 bg-none border-none cursor-pointer' onClick={() => setOpen(prevOpen => !prevOpen)}>
-                    {open ? <Close size={24} /> : <Add size={24}/>}
+                    {open ? <Close size={24} /> : <Add size={24} />}
                 </button>
             </div>
             {codeMirror &&
