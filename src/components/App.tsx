@@ -24,7 +24,7 @@ function App() {
     }, [html, css, javascript])
 
     return (
-        <div className='flex flex-col h-screen w-screen'>
+        <div className='flex flex-col h-screen w-screen bg-gray-600'>
             <div className='flex h-full w-full'>
                 <Editor
                     displayName={"HTML"}

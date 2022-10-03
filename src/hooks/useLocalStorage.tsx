@@ -2,13 +2,16 @@ import { useEffect, useState } from 'react'
 
 const prefix = 'editor-'
 
-export default function useLocalStorage(key, initialValue) {
+
+console.log(typeof window)
+export default function useLocalStorage(key: any, initialValue: any) {
   const prefixedKey = prefix + key
 
   const [value, setValue] = useState(() => {
+    if (typeof window !== 'undefined') {
     const jsonValue = localStorage.getItem(prefixedKey)
     if (jsonValue != null) return JSON.parse(jsonValue)
-
+    }
     if (typeof initialValue === 'function') {
       return initialValue()
     } else {
